@@ -1,3 +1,39 @@
+# 依赖
 /node_modules
+backend/venv/
+
+# 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
 .reasonix
 venvs/*
+
+# 数据集（可重新下载）
+training/data/
+
+# 训练输出
+training/runs/
+
+# 预训练模型（自动下载）
+training/*.pt
+
+# 检测结果图片
+detection_results/
+
+# 后端上传目录（旧）
+backend/uploads/
+
+# 临时模型文件
+*_test.pt
+*_tmp.pt
+*_converted.pt
+
+# macOS
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env
+.env.local

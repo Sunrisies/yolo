@@ -1,0 +1,9 @@
+# 裂缝检测数据集配置
+# 由 prepare_data.py 自动生成的完整配置位于 data/crack_dataset/dataset.yaml
+
+path: ./data/crack_dataset
+train: images/train
+val: images/val
+test: images/test
+nc: 1
+names: ['crack']
