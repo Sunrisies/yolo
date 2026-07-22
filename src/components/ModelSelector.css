@@ -1,0 +1,261 @@
+.model-selector {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.model-selector-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f5f5f5;
+  color: #555;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.model-selector-trigger:hover:not(:disabled) {
+  background: #eee;
+  border-color: #ccc;
+}
+
+.model-selector-trigger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.model-trigger-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.model-trigger-text {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.model-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.model-arrow {
+  font-size: 10px;
+  transition: transform 0.15s;
+  line-height: 1;
+}
+
+.model-arrow.open {
+  transform: rotate(180deg);
+}
+
+.model-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 260px;
+  max-width: 320px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #999;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  color: #555;
+  background: #f5f5f5;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dropdown-loading,
+.dropdown-empty {
+  padding: 20px 12px;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+}
+
+.dropdown-empty-hint {
+  font-size: 11px !important;
+  color: #bbb;
+  margin-top: 4px !important;
+}
+
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.dropdown-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 2px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+  background: #f8f8f8;
+}
+
+.dropdown-item.active {
+  background: #f0f7ff;
+  border-left-color: #4a90d9;
+}
+
+.item-icon {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.item-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.item-name {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-badge {
+  font-size: 10px;
+  background: #4a90d9;
+  color: white;
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.item-meta {
+  font-size: 11px;
+  color: #999;
+}
+
+.item-check {
+  color: #4a90d9;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.model-toast {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 2000;
+  max-width: 380px;
+  animation: toastSlideIn 0.25s ease;
+}
+
+.model-toast-error {
+  background: #fff0f0;
+  border: 1px solid #ffcdd2;
+  color: #c62828;
+}
+
+.model-toast-success {
+  background: #f0faf0;
+  border: 1px solid #c8e6c9;
+  color: #2e7d32;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 2px;
+  opacity: 0.6;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.toast-close:hover {
+  opacity: 1;
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

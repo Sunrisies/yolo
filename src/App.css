@@ -1,0 +1,283 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+
+.app-header {
+  height: 52px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.app-header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.upload-section {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.batch-upload {
+  background: #fff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+  padding: 20px !important;
+}
+
+.upload-header h2 {
+  color: #333 !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+}
+
+.upload-header p {
+  color: #999 !important;
+  font-size: 0.85rem !important;
+}
+
+.drop-zone {
+  background: #fafafa !important;
+  border: 1px dashed #ccc !important;
+  border-radius: 6px !important;
+  padding: 36px 20px !important;
+}
+
+.drop-zone:hover {
+  border-color: #999 !important;
+  background: #f5f5f5 !important;
+}
+
+.drop-zone.dragging {
+  border-color: #666 !important;
+  background: #eee !important;
+}
+
+.drop-text {
+  color: #555 !important;
+  font-size: 0.9rem !important;
+}
+
+.drop-hint {
+  color: #999 !important;
+  font-size: 0.8rem !important;
+}
+
+.file-list-header span {
+  color: #555 !important;
+  font-size: 0.85rem !important;
+}
+
+.file-item {
+  background: #fafafa !important;
+  border-radius: 4px !important;
+}
+
+.file-name {
+  color: #333 !important;
+  font-size: 0.85rem !important;
+}
+
+.file-size {
+  font-size: 0.75rem !important;
+}
+
+.detect-btn {
+  background: #333 !important;
+  border-radius: 4px !important;
+  font-size: 0.9rem !important;
+  padding: 10px !important;
+  font-weight: 500 !important;
+}
+
+.detect-btn:hover:not(:disabled) {
+  background: #555 !important;
+}
+
+.clear-btn {
+  font-size: 0.8rem !important;
+  padding: 3px 10px !important;
+}
+
+.remove-file {
+  width: 22px !important;
+  height: 22px !important;
+  font-size: 0.9rem !important;
+}
+
+.status-message {
+  font-size: 0.85rem !important;
+  padding: 10px 14px !important;
+}
+
+.status-message.processing {
+  background: #f5f5f5 !important;
+  color: #555 !important;
+}
+
+.status-message.done {
+  background: #f5f5f5 !important;
+  color: #333 !important;
+}
+
+.progress-bar {
+  height: 4px !important;
+  background: #e0e0e0 !important;
+}
+
+.progress-fill {
+  background: #666 !important;
+}
+
+.records-section {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.records-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.records-header h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.records-count {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.record-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.record-card:hover {
+  border-color: #ccc;
+}
+
+.record-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.record-status {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.record-status.has-damage {
+  background: #fff0f0;
+  color: #c0392b;
+}
+
+.record-status.no-damage {
+  background: #f0faf0;
+  color: #27ae60;
+}
+
+.record-delete-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  color: #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.record-delete-btn:hover {
+  background: #f5f5f5;
+  color: #c0392b;
+}
+
+.record-card-body {
+  padding: 10px 12px;
+}
+
+.record-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.record-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.record-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.record-type-tag {
+  font-size: 0.7rem;
+  background: #f5f5f5;
+  color: #666;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
